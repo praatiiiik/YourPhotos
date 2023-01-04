@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/localCloudFragment">
+
+    <fragment
+        android:id="@+id/localCloudFragment"
+        android:name="com.yourphotos.ui.mainActivity.LocalCloudFragment"
+        android:label="fragment_local_cloud"
+        tools:layout="@layout/fragment_local_cloud" >
+        <action
+            android:id="@+id/action_localCloudFragment_to_imageViewFragment"
+            app:destination="@id/imageViewFragment" />
+        <action
+            android:id="@+id/action_localCloudFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageViewFragment"
+        android:name="com.yourphotos.ui.imageShowing.GalleryFullScreenFragment"
+        android:label="fragment_image_view"
+        tools:layout="@layout/fragment_image_view" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.yourphotos.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
